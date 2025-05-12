@@ -90,4 +90,19 @@ public class Ctrl_Usuario {
     public List<Usuario> listarTodos() {
         return new ArrayList<>(usuarios);
     }
+
+    /**
+     * Autentica al usuario. Si usuario+clave coinciden, devuelve
+     * el objeto Usuario completo (con rol), o null si falla.
+     */
+    public Usuario login(Usuario u) {
+        for (Usuario x : usuarios) {
+            if (x.getUsuario().equals(u.getUsuario()) &&
+                x.getClave().equals(u.getClave())) {
+                return x;
+            }
+        }
+        return null;
+    }
+
 }
