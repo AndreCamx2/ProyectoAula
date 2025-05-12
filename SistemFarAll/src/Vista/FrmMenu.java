@@ -122,6 +122,11 @@ public class FrmMenu extends javax.swing.JFrame {
         jMenuItem_actualizar_producto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/nuevo.png"))); // NOI18N
         jMenuItem_actualizar_producto.setText("Actualizar Stock");
         jMenuItem_actualizar_producto.setPreferredSize(new java.awt.Dimension(180, 30));
+        jMenuItem_actualizar_producto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem_actualizar_productoActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem_actualizar_producto);
 
         jMenuBar1.add(jMenu2);
@@ -306,6 +311,10 @@ public class FrmMenu extends javax.swing.JFrame {
     private void jMenuItem_gestionar_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_gestionar_usuarioActionPerformed
         
     }//GEN-LAST:event_jMenuItem_gestionar_usuarioActionPerformed
+
+    private void jMenuItem_actualizar_productoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_actualizar_productoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem_actualizar_productoActionPerformed
 
     /**
      * @param args the command line arguments
