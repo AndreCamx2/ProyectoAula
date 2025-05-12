@@ -3,10 +3,11 @@ package Vista;
 
 import Modelo.Usuario;
 import java.awt.Dimension;
+import javax.swing.JDesktopPane;
 
 public class FrmMenu extends javax.swing.JFrame {
     private Usuario usuarioLogueado;
-
+    public static JDesktopPane jDesktopPane_menu;
 
     public FrmMenu() {
         
@@ -20,6 +21,9 @@ public class FrmMenu extends javax.swing.JFrame {
     public FrmMenu(Usuario u) {
         
         initComponents();
+        jDesktopPane_menu = new JDesktopPane();
+        this.add(jDesktopPane_menu);
+
         this.usuarioLogueado = u;
         this.setSize(new Dimension(1200, 700));
         this.setExtendedState(this.MAXIMIZED_BOTH);
@@ -87,6 +91,11 @@ public class FrmMenu extends javax.swing.JFrame {
         jMenuItem_gestionar_usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/configuraciones.png"))); // NOI18N
         jMenuItem_gestionar_usuario.setText("Gestionar Usuarios");
         jMenuItem_gestionar_usuario.setPreferredSize(new java.awt.Dimension(180, 30));
+        jMenuItem_gestionar_usuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem_gestionar_usuarioActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem_gestionar_usuario);
 
         jMenuBar1.add(jMenu1);
@@ -294,6 +303,10 @@ public class FrmMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem_reportes_clientesActionPerformed
 
+    private void jMenuItem_gestionar_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_gestionar_usuarioActionPerformed
+        
+    }//GEN-LAST:event_jMenuItem_gestionar_usuarioActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -384,5 +397,7 @@ public class FrmMenu extends javax.swing.JFrame {
         // Si tienes etiqueta de bienvenida, podrías descomentar:
         // lblBienvenida.setText("Hola, " + usuarioLogueado.getNombre() + " (" + rol + ")");
     }
+
+    
 
 }
