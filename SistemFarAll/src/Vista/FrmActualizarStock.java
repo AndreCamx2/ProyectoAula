@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Monkey D. Andre
+ * @author Mañoso
  */
 public class FrmActualizarStock extends javax.swing.JInternalFrame {
 

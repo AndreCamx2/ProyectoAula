@@ -4,20 +4,13 @@ import Controlador.Ctrl_Producto;
 import Modelo.Producto;
 import java.awt.Dimension;
 import java.awt.HeadlessException;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Monkey D. Andre
+ * @author Mañoso
  */
 public class FrmGestionarProducto extends javax.swing.JInternalFrame {
 
@@ -329,70 +322,17 @@ public class FrmGestionarProducto extends javax.swing.JInternalFrame {
     private void CargarComboCategoria() {
 
     }
-
     /*
      * *****************************************************
      * metodo para mostrar todos los productos registrados
      * *****************************************************
      */
-    String descripcionCategoria = "";
     double precio = 0.0;
     int porcentajeIva = 0;
     double IVA = 0;
 
     private void CargarTablaProductos() {
-        DefaultTableModel model = new DefaultTableModel();
-        String sql = "select p.idProducto, p.nombre, p.cantidad, p.precio, p.descripcion, p.porcentajeIva, c.descripcion, p.estado from tb_producto As p, tb_categoria As c where p.idCategoria = c.idCategoria;";
-        Statement st = null;
-        try {
-            ResultSet rs = st.executeQuery(sql);
-            FrmGestionarProducto.jTable_productos = new JTable(model);
-            FrmGestionarProducto.jScrollPane1.setViewportView(FrmGestionarProducto.jTable_productos);
 
-            model.addColumn("N°");//ID
-            model.addColumn("nombre");
-            model.addColumn("cantidad");
-            model.addColumn("precio");
-            model.addColumn("descripcion");
-            model.addColumn("Iva");
-            model.addColumn("Categoria");
-            model.addColumn("estado");
-
-            while (rs.next()) {
-
-                precio = rs.getDouble("precio");
-                porcentajeIva = rs.getInt("porcentajeIva");
-
-                Object fila[] = new Object[8];
-                for (int i = 0; i < 8; i++) {
-
-                    if (i == 5) {
-                        this.calcularIva(precio, porcentajeIva);//metodo
-                        fila[i] = IVA;
-                        rs.getObject(i + 1);
-                    } else {
-                        fila[i] = rs.getObject(i + 1);
-                    }
-                }
-                model.addRow(fila);
-            }
-        } catch (SQLException e) {
-            System.out.println("Error al llenar la tabla productos: " + e);
-        }
-        //evento para obtener campo al cual el usuario da click
-        //y obtener la interfaz que mostrara la informacion general
-        jTable_productos.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                int fila_point = jTable_productos.rowAtPoint(e.getPoint());
-                int columna_point = 0;
-
-                if (fila_point > -1) {
-                    idProducto = (int) model.getValueAt(fila_point, columna_point);
-                    EnviarDatosProductoSeleccionado(idProducto);//metodo
-                }
-            }
-        });
     }
 
     /*
