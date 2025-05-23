@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "nombre": "Acetaminof\u00e9n",
+        "cantidad": 100,
+        "precio": 1500,
+        "descripcion": "Tabletas 500mg",
+        "porcentajeIGV": 19,
+        "estado": 1,
+        "categoria": "Analg\u00e9sico"
+    },
+    {
+        "id": 2,
+        "nombre": "Ibuprofeno",
+        "cantidad": 80,
+        "precio": 1800,
+        "descripcion": "C\u00e1psulas 400mg",
+        "porcentajeIGV": 19,
+        "estado": 1,
+        "categoria": "Antiinflamatorio"
+    },
+    {
+        "id": 3,
+        "nombre": "Amoxicilina",
+        "cantidad": 50,
+        "precio": 2500,
+        "descripcion": "Suspensi\u00f3n oral 250mg/5ml",
+        "porcentajeIGV": 19,
+        "estado": 1,
+        "categoria": "Antibi\u00f3tico"
+    },
+    {
+        "id": 4,
+        "nombre": "Loratadina",
+        "cantidad": 120,
+        "precio": 1700,
+        "descripcion": "Tabletas 10mg",
+        "porcentajeIGV": 19,
+        "estado": 1,
+        "categoria": "Antihistam\u00ednico"
+    },
+    {
+        "id": 5,
+        "nombre": "Salbutamol",
+        "cantidad": 30,
+        "precio": 3500,
+        "descripcion": "Inhalador 100mcg",
+        "porcentajeIGV": 19,
+        "estado": 1,
+        "categoria": "Broncodilatador"
+    }
+]

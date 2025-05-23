@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "descripcion": "Analg\u00e9sico",
+        "estado": 1
+    },
+    {
+        "id": 2,
+        "descripcion": "Antibi\u00f3tico",
+        "estado": 1
+    },
+    {
+        "id": 3,
+        "descripcion": "Antiinflamatorio",
+        "estado": 1
+    },
+    {
+        "id": 4,
+        "descripcion": "Antihistam\u00ednico",
+        "estado": 1
+    },
+    {
+        "id": 5,
+        "descripcion": "Broncodilatador",
+        "estado": 1
+    }
+]

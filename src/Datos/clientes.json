@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "nombre": "Pedro",
+        "apellido": "Martinez",
+        "cedula": "123456789",
+        "telefono": "3001234567",
+        "direccion": "Calle 12 #4-56",
+        "estado": 1
+    },
+    {
+        "id": 2,
+        "nombre": "Ana",
+        "apellido": "Gomez",
+        "cedula": "987654321",
+        "telefono": "3012345678",
+        "direccion": "Carrera 9 #8-23",
+        "estado": 1
+    },
+    {
+        "id": 3,
+        "nombre": "Luis",
+        "apellido": "Ramirez",
+        "cedula": "1122334455",
+        "telefono": "3023456789",
+        "direccion": "Av. Siempre Viva 123",
+        "estado": 1
+    },
+    {
+        "id": 4,
+        "nombre": "Camila",
+        "apellido": "Rojas",
+        "cedula": "5566778899",
+        "telefono": "3034567890",
+        "direccion": "Diagonal 7 #45-67",
+        "estado": 1
+    },
+    {
+        "id": 5,
+        "nombre": "Esteban",
+        "apellido": "Torres",
+        "cedula": "9988776655",
+        "telefono": "3045678901",
+        "direccion": "Calle 23 #11-34",
+        "estado": 1
+    }
+]
